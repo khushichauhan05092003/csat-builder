@@ -1,0 +1,123 @@
+.opts {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.opts__list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.opts__row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  padding: 6px 8px 6px 6px;
+  transition: border-color 0.15s ease;
+
+  &:hover {
+    border-color: #D4D1C8;
+  }
+
+  &:focus-within {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-soft);
+  }
+}
+
+.opts__grip {
+  color: #C7C4BC;
+  flex-shrink: 0;
+  cursor: grab;
+}
+
+.opts__input {
+  flex: 1;
+  border: none;
+  background: none;
+  font-size: 13.5px;
+  color: var(--ink);
+  padding: 4px 0;
+  min-width: 0;
+
+  &:focus {
+    outline: none;
+  }
+
+  &::placeholder {
+    color: #B7B5AD;
+  }
+}
+
+.opts__delete {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  border: none;
+  background: none;
+  color: var(--muted);
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: all 0.15s ease;
+
+  &:hover:not(:disabled) {
+    background: var(--danger-soft);
+    color: var(--danger);
+  }
+
+  &:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+  }
+}
+
+.opts__empty {
+  font-size: 13px;
+  color: var(--muted);
+  padding: 14px;
+  text-align: center;
+  border: 1px dashed var(--line);
+  border-radius: 9px;
+  margin: 0;
+}
+
+.opts__add {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  align-self: flex-start;
+  border: 1px dashed #C7C4BC;
+  background: none;
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: 9px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  margin-top: 2px;
+
+  &:hover:not(:disabled) {
+    background: var(--accent-soft);
+    border-color: var(--accent);
+  }
+
+  &:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+}
+
+.opts__limit {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--muted);
+}

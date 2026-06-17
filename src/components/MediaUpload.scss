@@ -1,0 +1,124 @@
+.media-upload {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-radius: 12px;
+  padding: 14px;
+  transition: all 0.15s ease;
+}
+
+.media-upload--empty {
+  border: 1.5px dashed #D4D1C8;
+  background: #FBFAF7;
+  cursor: pointer;
+
+  &:hover {
+    border-color: var(--accent);
+    background: var(--accent-soft);
+  }
+}
+
+.media-upload__icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 9px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.media-upload__copy {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+}
+
+.media-upload__title {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.media-upload__hint {
+  font-size: 11.5px;
+  color: var(--muted);
+}
+
+.media-upload__decor {
+  color: #D4D1C8;
+  flex-shrink: 0;
+}
+
+.media-upload--filled {
+  border: 1px solid var(--line);
+  background: var(--paper);
+}
+
+.media-upload__preview {
+  width: 38px;
+  height: 38px;
+  border-radius: 9px;
+  overflow: hidden;
+  flex-shrink: 0;
+  background: var(--accent-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.media-upload__lottie-badge {
+  color: var(--accent);
+  display: flex;
+}
+
+.media-upload__meta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+  min-width: 0;
+}
+
+.media-upload__name {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.media-upload__type {
+  font-size: 11.5px;
+  color: var(--muted);
+}
+
+.media-upload__clear {
+  width: 26px;
+  height: 26px;
+  border-radius: 7px;
+  border: none;
+  background: none;
+  color: var(--muted);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  &:hover {
+    background: var(--danger-soft);
+    color: var(--danger);
+  }
+}
